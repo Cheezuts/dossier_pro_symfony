@@ -1,0 +1,29 @@
+/* Styles pour la navigation */
+.container-fluid.sticky-top {
+  background-color: #ef222d;
+}
+
+.container-fluid.sticky-top h1,
+.container-fluid.sticky-top a.navbar-brand,
+.container-fluid.sticky-top .navbar-nav .nav-link {
+  font-family: "Figtree-Regular", sans-serif;
+  color: #fff;
+  font-weight: bold;
+}
+
+h1 {
+  font-family: "Figtree-Regular", sans-serif;
+  font-weight: bold;
+  font-style: bold;
+}
+
+h2 {
+  font-family: "Figtree-Regular", sans-serif;
+  font-weight: bold;
+  font-style: italic;
+}
+p {
+  font-family: "Figtree-Regular", sans-serif;
+  font-weight: bold;
+  font-style: bold;
+}
