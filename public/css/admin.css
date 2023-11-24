@@ -5,7 +5,8 @@
   font-style: bold;
 }
 
-span,
+.menu-item-label,
+.btn-primary,
 li,
 a,
 .menu-item.active {
@@ -34,4 +35,21 @@ a,
 #main-menu .menu .menu-item.active:not(.expanded) a {
   color: white;
   background-color: #ef222d;
+}
+
+.pagination .page-link {
+  background-color: #ef222d;
+  border-color: #ef222d;
+  color: white;
+}
+
+.page-item.active .page-link {
+  background-color: white;
+  border-color: #ef222d;
+  color: #ef222d;
+}
+.page-item.disabled .page-link {
+  background-color: #ef222d;
+  border-color: #ef222d;
+  color: white;
 }
