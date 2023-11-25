@@ -8,40 +8,59 @@
 	{% include 'navbar.html.twig' %}
 
 	<!-- Div vide de la même hauteur que la barre de navigation -->
-	<div class="spacer" style="height: 66px"></div>
+	<div class="spacer" style="height: 70px"></div>
 
-	<div class="text-center vh-100 d-flex justify-content-center align-items-center py-5 mt-5">
+	<div class="row mb-5 text-center justify-content-center">
+		<div class="col-md-12">
+			<h1 class="mb-4">Solutions de financement</h1>
+		</div>
+	</div>
 
-		<div class="container">
-			<div class="row mb-5">
-				<div class="col-md-12">
-					<h1 class="mb-4">Solutions de financement</h1>
-				</div>
-			</div>
-
-			{% set sections = [
-                {'title': 'Mon Compte Formation', 'content': 'Financez votre formation grâce à votre CPF ! Une solution simple qui vous permet d’accéder à la mobilité.', 'image': 'cpf.png'},
-                {'title': 'Permis 1€', 'content': 'Financez votre formation grâce à votre CPF ! Une solution simple qui vous permet d’accéder à la mobilité.', 'image': 'permis1euro.jpg'},
-                {'title': 'Devis Pôle Emploi', 'content': 'Nous sommes un organisme de formation certifié Qualiopi. Vous pouvez donc vous faire accompagner sur le plan financier par Pôle Emploi en passant votre permis chez nous !', 'image': 'poleemploi.png'},
-                {'title': 'Aide au financement via CFA', 'content': 'Depuis le 1er janvier 2019, les apprentis majeurs peuvent bénéficier d’une aide d’État de 500€ pour financer leur permis de conduire. Contactez-nous afin de nous puissions vous aider dans cette démarche.', 'image': 'aidefinancementcfa.png'},
-            ] %}
-
-			{% for section in sections %}
-				<div class="row mb-5">
-					<div class="col-md-6">
-						<h2>{{ section.title }}</h2>
-						<p>{{ section.content }}</p>
-						<button class="btn btn-primary btn-lg mt-3">Nous contacter</button>
-					</div>
-					<div class="col-md-6">
-						<img src="{{ asset('images/' ~ section.image) }}" alt="{{ section.title }}" class="img-fluid">
-					</div>
-				</div>
-			{% endfor %}
-
-
+	<div class="row text-center">
+		<div class="col-md-6 d-flex align-items-center justify-content-center flex-column">
+			<h2 class="display-4 mb-4">Mon Compte Formation</h2>
+			<p class="lead mb-4">Financez votre formation grâce à votre CPF ! Une solution simple qui vous permet d’accéder à la mobilité.</p>
+			<button class="btn btn-primary btn-lg">Nous contacter</button>
 		</div>
 
+		<div class="col-md-6">
+			<img src="{{ asset('images/cpf.png') }}" alt="Mon Compte Formation" class="img-fluid p-5" style="max-width: 60%; height: auto;">
+		</div>
 	</div>
+
+	<div class="row text-center">
+		<div class="col-md-6">
+			<img src="{{ asset('images/permis1euro.jpg') }}" alt="Mon Compte Formation" class="img-fluid p-5" style="max-width: 60%; height: auto;">
+		</div>
+		<div class="col-md-6 d-flex align-items-center justify-content-center flex-column">
+			<h2 class="display-4 mb-4">Permis 1€</h2>
+			<p class="lead mb-4">Le permis à 1€ par jour, une facilité de paiement à toutes les personnes de 15 à 25 ans qui souhaitent passer leur permis.</p>
+			<button class="btn btn-primary btn-lg">Nous contacter</button>
+		</div>
+	</div>
+
+	<div class="row text-center">
+		<div class="col-md-6 d-flex align-items-center justify-content-center flex-column">
+			<h2 class="display-4 mb-4">Devis Pôle Emploi</h2>
+			<p class="lead mb-4">Nous sommes un organisme de formation certifié Qualiopi. Vous pouvez donc vous faire accompagner sur le plan financier par Pôle Emploi en passant votre permis chez nous !</p>
+			<button class="btn btn-primary btn-lg">Nous contacter</button>
+		</div>
+
+		<div class="col-md-6">
+			<img src="{{ asset('images/poleemploi.png') }}" alt="Mon Compte Formation" class="img-fluid p-5" style="max-width: 60%; height: auto;">
+		</div>
+	</div>
+
+	<div class="row text-center">
+		<div class="col-md-6">
+			<img src="{{ asset('images/aidefinancementcfa.png') }}" alt="Mon Compte Formation" class="img-fluid p-5" style="max-width: 60%; height: auto;">
+		</div>
+		<div class="col-md-6 d-flex align-items-center justify-content-center flex-column">
+			<h2 class="display-4 mb-4">Aide au financement via CFA</h2>
+			<p class="lead mb-4">Depuis le 1er janvier 2019, les apprentis majeurs peuvent bénéficier d’une aide d’État de 500€ pour financer leur permis de conduire. Contactez-nous afin de nous puissions vous aider dans cette démarche.</p>
+			<button class="btn btn-primary btn-lg">Nous contacter</button>
+		</div>
+	</div>
+
 
 {% endblock %}
