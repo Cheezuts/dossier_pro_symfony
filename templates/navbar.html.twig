@@ -30,7 +30,7 @@
 						<a href="service.html" class="nav-link">Pièces administratives</a>
 					</li>
 					<li class="nav-item">
-						<a href="project.html" class="nav-link">Financements</a>
+						<a href="{{ path('app_financements')}}" class="nav-link">Financements</a>
 					</li>
 					<li class="nav-item">
 						<a href="contact.html" class="nav-link">Contact</a>
@@ -38,12 +38,7 @@
 					<li class="nav-item">
 						<a href="{{ path('app_commentaires') }}" class="nav-link">Commentaires</a>
 					</li>
-					<li class="nav-item">
-						<a href="{{ path('app_home') }}" class="nav-link">Home</a>
-					</li>
-					<li class="nav-item">
-						<a href="?action=create" class="nav-link">Create</a>
-					</li>
+
 					<!-- Lien Admin -->
 					<li class="nav-item">
 						<a href="{{ path('admin') }}" class="nav-link">Administration</a>

@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}AE-Financements
+{% endblock %}
+
+{% block body %}
+
+	{% include 'navbar.html.twig' %}
+
+	<!-- Div vide de la même hauteur que la barre de navigation -->
+	<div class="spacer" style="height: 66px"></div>
+
+	<div class="text-center vh-100 d-flex justify-content-center align-items-center py-5 mt-5">
+
+		<div class="container">
+			<div class="row mb-5">
+				<div class="col-md-12">
+					<h1 class="mb-4">Solutions de financement</h1>
+				</div>
+			</div>
+
+			{% set sections = [
+                {'title': 'Mon Compte Formation', 'content': 'Financez votre formation grâce à votre CPF ! Une solution simple qui vous permet d’accéder à la mobilité.', 'image': 'cpf.png'},
+                {'title': 'Permis 1€', 'content': 'Financez votre formation grâce à votre CPF ! Une solution simple qui vous permet d’accéder à la mobilité.', 'image': 'permis1euro.jpg'},
+                {'title': 'Devis Pôle Emploi', 'content': 'Nous sommes un organisme de formation certifié Qualiopi. Vous pouvez donc vous faire accompagner sur le plan financier par Pôle Emploi en passant votre permis chez nous !', 'image': 'poleemploi.png'},
+                {'title': 'Aide au financement via CFA', 'content': 'Depuis le 1er janvier 2019, les apprentis majeurs peuvent bénéficier d’une aide d’État de 500€ pour financer leur permis de conduire. Contactez-nous afin de nous puissions vous aider dans cette démarche.', 'image': 'aidefinancementcfa.png'},
+            ] %}
+
+			{% for section in sections %}
+				<div class="row mb-5">
+					<div class="col-md-6">
+						<h2>{{ section.title }}</h2>
+						<p>{{ section.content }}</p>
+						<button class="btn btn-primary btn-lg mt-3">Nous contacter</button>
+					</div>
+					<div class="col-md-6">
+						<img src="{{ asset('images/' ~ section.image) }}" alt="{{ section.title }}" class="img-fluid">
+					</div>
+				</div>
+			{% endfor %}
+
+
+		</div>
+
+	</div>
+
+{% endblock %}

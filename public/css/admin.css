@@ -35,6 +35,7 @@ a,
 #main-menu .menu .menu-item.active:not(.expanded) a {
   color: white;
   background-color: #ef222d;
+  hover: white;
 }
 
 .pagination .page-link {
@@ -69,5 +70,9 @@ a,
 }
 
 .custom-bold-options option {
+  font-weight: bold;
+}
+
+.custom-bold-options option[selected] {
   font-weight: bold;
 }

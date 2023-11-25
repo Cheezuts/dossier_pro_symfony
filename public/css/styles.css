@@ -54,3 +54,9 @@ p {
 .custom-bold-options option {
   font-weight: bold;
 }
+
+/* div vide en dessous de navbar */
+
+.spacer {
+  height: 66px; /* La même hauteur que votre barre de navigation */
+}
