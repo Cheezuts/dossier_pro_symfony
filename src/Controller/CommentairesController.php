@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Commentaire;
 use App\Form\CommentaireFormType;
 use App\Service\CommentaireService;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -12,11 +13,13 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class CommentairesController extends AbstractController
 {
-    private $commentaireService;
+    //private $commentaireService;
+    private $entityManager;
 
-    public function __construct(CommentaireService $commentaireService)
+    public function __construct(CommentaireService $commentaireService, EntityManagerInterface $entityManager)
     {
-        $this->commentaireService = $commentaireService;
+        //$this->commentaireService = $commentaireService;
+        $this->entityManager = $entityManager;
     }
 
     #[Route('/commentaires', name: 'app_commentaires')]
@@ -41,10 +44,16 @@ class CommentairesController extends AbstractController
             return $this->redirectToRoute('app_commentaires');
         }
 
+        // Récupérer les commentaires publiés depuis la base de données
+        $commentairesPublies = $this->entityManager
+            ->getRepository(Commentaire::class)
+            ->findBy(['isPublished' => true]);
+
         // Afficher le formulaire dans votre vue
         return $this->render('commentaires/index.html.twig', [
             'controller_name' => 'CommentairesController',
             'form' => $form->createView(), // Assurez-vous que cette ligne est présente
+            'commentairesPublies' => $commentairesPublies,
         ]);
     }
 }
