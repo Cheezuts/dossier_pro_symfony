@@ -1,7 +1,7 @@
 <div class="container-fluid sticky-top ">
 	<div class="">
 		<nav class="navbar navbar-expand-lg  p-0">
-			<a href="/TestMVC/index.php" class="navbar-brand">
+			<a href="{{ path('app_home') }}" class="navbar-brand">
 				<h1 class="text-white">DossierProLOCAL<span class="">.</span>AE</h1>
 			</a>
 			<button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -38,29 +38,20 @@
 					<li class="nav-item">
 						<a href="{{ path('app_commentaires') }}" class="nav-link">Commentaires</a>
 					</li>
-					<li class="nav-link">
+					<li class="nav-item">
 						<a href="{{ path('app_home') }}" class="nav-link">Home</a>
 					</li>
-					<li class="nav-link">
+					<li class="nav-item">
 						<a href="?action=create" class="nav-link">Create</a>
 					</li>
-
 					<!-- Lien Admin -->
-					<li class="nav-link">
-						<a href="{{ path('admin') }}" class="nav-link">Admin</a>
-					</li>
-
-					<li class="nav-link">
-						<a href="?action=logout" class="nav-link">Déconnexion</a>
+					<li class="nav-item">
+						<a href="{{ path('admin') }}" class="nav-link">Administration</a>
 					</li>
 
 				</ul>
-				{# <button type="button" class="btn text-white p-0 d-none d-lg-block" data-bs-toggle="modal" data-bs-target="#searchModal">
-																																					<i class="fa fa-search"></i>
-																																				</button> #}
+
 			</div>
 		</nav>
 	</div>
 </div>
-
-<div class="container">

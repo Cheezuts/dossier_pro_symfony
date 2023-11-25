@@ -7,69 +7,51 @@
 
 	{% include 'navbar.html.twig' %}
 
-	<table class="table table-primary">
-		<thead>
-			<tr>
-				<th scope="col">#</th>
-				<th scope="col">First</th>
-				<th scope="col">Last</th>
-				<th scope="col">Handle</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<th scope="row">1</th>
-				<td>Mark</td>
-				<td>Otto</td>
-				<td>@mdo</td>
-			</tr>
-			<tr>
-				<th scope="row">2</th>
-				<td>Jacob</td>
-				<td>Thornton</td>
-				<td>@fat</td>
-			</tr>
-			<tr>
-				<th scope="row">3</th>
-				<td colspan="2">Larry the Bird</td>
-				<td>@twitter</td>
-			</tr>
-		</tbody>
-	</table>
-	<table class="table table-success">
-		<thead>
-			<tr>
-				<th scope="col">Nom</th>
-				<th scope="col">Prénom</th>
-				<th scope="col">Age</th>
-				<th scope="col">Sexe</th>
-				<th scope="col">Ville</th>
-				<th scope="col">Email</th>
-				<th scope="col">Téléphone</th>
-				<th scope="col">Date de naissance</th>
-				<th scope="col">Date d'inscription</th>
-				<th scope="col">Date de modification</th>
-				<th scope="col">Date de suppression</th>
-			</tr>
-		</thead>
-	</table>
-	<table class="table table-dark">
-		<thead>
-			...
-		</thead>
-		<tbody>
-			<tr class="table-active">
-				...
-			</tr>
-			<tr>
-				...
-			</tr>
-			<tr>
-				<th scope="row">3</th>
-				<td colspan="2" class="table-active">Larry the Bird</td>
-				<td>@twitter</td>
-			</tr>
-		</tbody>
-	</table>
+	<div class="container">
+		<h2 class="mt-5 mb-4">Formations Code</h2>
+
+		<div class="row mb-3">
+			<div class="col-md-8">
+				<h3>Code Internet</h3>
+				<ul>
+					<li>Application de révision du code de la route (le choix des meilleurs partenaires) valable 6 mois</li>
+					<li>Code internet premium : cours en ligne à votre disposition réalisés par des enseignants professionnels +15€</li>
+				</ul>
+			</div>
+			<div class="col-md-4 text-muted ml-auto">
+				<p class="text-right">50€</p>
+			</div>
+		</div>
+
+		<div class="row mb-3">
+			<div class="col-md-8">
+				<h3>Code Traditionnel</h3>
+				<ul>
+					<li>Forfait code internet premium valable 1 an</li>
+					<li>Accès à nos salles de code illimité avec possibilité d’accompagnement par un formateur valable 1 an</li>
+				</ul>
+			</div>
+			<div class="col-md-4 text-muted ml-auto">
+				<p class="text-right">205€</p>
+			</div>
+		</div>
+
+		<div class="row mb-3">
+			<div class="col-md-8">
+				<h3>Code Intensif</h3>
+				<ul>
+					<li>Forfait code traditionnel</li>
+					<li>1 stage de code intensif sur 3 jours en présentiel avec un formateur</li>
+					<li>Formation le lundi, mardi et mercredi, passage à l’examen le jeudi (en fonction des dates du stage)</li>
+				</ul>
+			</div>
+			<div class="col-md-4 text-muted ml-auto">
+				<p class="text-right">345€</p>
+			</div>
+		</div>
+
+		<button class="btn btn-primary btn-lg">Nous contacter</button>
+	</div>
+
 
 {% endblock %}

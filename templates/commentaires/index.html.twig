@@ -23,7 +23,14 @@
 				<div class="col-md-4">
 					{{ form_start(form) }}
 
+					{{ form_row(form.nom) | raw }}
+					{{ form_row(form.prenom) | raw }}
+					{{ form_row(form.contenu) | raw }}
+					{{ form_row(form.note) | raw }}
+
+
 					{{ form_end(form) }}
+
 				</div>
 			</div>
 			{# Fin du formulaire de contact #}

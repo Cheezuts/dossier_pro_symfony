@@ -9,6 +9,7 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
 class CommentaireFormType extends AbstractType
 {
@@ -17,22 +18,26 @@ class CommentaireFormType extends AbstractType
         $builder
 
             ->add('nom', TextType::class, [
-                'label' => 'Nom',
+                'label' => '<strong>Nom</strong>',
+                'label_html' => true,
                 'attr' => [
-                    'class' => 'form-control'
+                    'class' => 'form-control m-3'
                 ]
             ])
             ->add('prenom', TextType::class, [
-                'label' => 'Prénom',
+                'label' => '<strong>Prénom</strong>',
+                'label_html' => true,
                 'attr' => [
-                    'class' => 'form-control'
+                    'class' => 'form-control m-3'
                 ]
             ])
-            ->add('contenu', TextType::class, [
-                'label' => 'Commentaire',
+            ->add('contenu', TextareaType::class, [
+                'label' => '<strong>Commentaire</strong>',
+                'label_html' => true,
                 'attr' => [
-                    'class' => 'form-control'
-                ]
+                    'class' => 'form-control m-3',
+                    'rows' => 6,
+                ],
             ])
             ->add('note', ChoiceType::class, [
                 'choices' => [
@@ -43,14 +48,15 @@ class CommentaireFormType extends AbstractType
                     '5' => 5
                 ],
                 'attr' => [
-                    'class' => 'form-select'
+                    'class' => 'form-select m-3 text-center custom-bold-options'
                 ],
-                'label' => 'Note'
+                'label' => '<strong>Note</strong>',
+                'label_html' => true,
             ])
             ->add('submit', SubmitType::class, [
                 'label' => 'Envoyer',
                 'attr' => [
-                    'class' => 'btn btn-primary'
+                    'class' => 'btn btn-primary btn-lg m-3'
                 ]
             ]);
     }

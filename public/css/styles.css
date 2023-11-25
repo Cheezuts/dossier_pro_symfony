@@ -34,3 +34,23 @@ p {
   font-weight: bold;
   font-style: bold;
 }
+
+.btn-primary {
+  background-color: #ef222d;
+  border-color: #ef222d;
+  color: white;
+  border-radius: 50px 50px 50px 50px;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+}
+
+.btn-primary:hover {
+  background-color: #fdfb3e;
+  border-color: #fdfb3e;
+  color: black;
+  font-weight: bold;
+}
+
+.custom-bold-options option {
+  font-weight: bold;
+}
