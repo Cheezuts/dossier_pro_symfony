@@ -60,3 +60,12 @@ p {
 .spacer {
   height: 66px; /* La même hauteur que votre barre de navigation */
 }
+
+/* Styles pour le footer */
+
+.footer {
+  background-color: #ef222d;
+  font-family: "Figtree-Regular", sans-serif;
+  font-weight: bold;
+  font-style: bold;
+}

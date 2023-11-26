@@ -76,3 +76,10 @@ a,
 .custom-bold-options option[selected] {
   font-weight: bold;
 }
+
+.footer {
+  background-color: #ef222d;
+  font-family: "Figtree-Regular", sans-serif;
+  font-weight: bold;
+  font-style: bold;
+}
