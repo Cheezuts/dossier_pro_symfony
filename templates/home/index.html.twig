@@ -7,7 +7,22 @@
 
 	{% include 'navbar.html.twig' %}
 
-	<div class="container"></div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h1>Home</h1>
+			</div>
+		</div>
+		{% for article in article %}
+			<div class="row">
+				<div class="col-md-12">
+					<h2>{{ article.titre }}</h2>
+					<img class="card-img-top p-2 m-2" src="{{ asset('images/voitures/' ~ article.imageName) }}">
+					<p>{{ article.texte }}</p>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
 
 
 {% endblock %}
