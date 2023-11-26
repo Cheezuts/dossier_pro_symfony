@@ -2,13 +2,14 @@
 
 namespace App\Controller\Admin;
 
+use App\Entity\Article;
 use App\Entity\Commentaire;
-use EasyCorp\Bundle\EasyAdminBundle\Config\Assets;
-use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
-use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
-use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use EasyCorp\Bundle\EasyAdminBundle\Config\Assets;
+use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
+use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
+use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
 
 class DashboardController extends AbstractDashboardController
 {
@@ -52,5 +53,6 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToRoute('Aller sur le site', 'fa fa-home', routeName: 'app_home');
         yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
         yield MenuItem::linkToCrud('Commentaire', 'fa-regular fa-comment', Commentaire::class);
+        yield MenuItem::linkToCrud('Article', 'fa-regular fa-comment', Article::class);
     }
 }
