@@ -8,30 +8,8 @@
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse" id="navbarCollapse">
-				<ul
-					class="navbar-nav ms-auto">
-					<!--
-																	<li class="nav-item">
-																		<a href="index.html" class="nav-link active">Code de la Route</a>
-																	</l
-																	<li class="nav-item dropdown">
-																		<a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Permis</a>
-																		<ul class="dropdown-menu mt-2">
-																			<li>
-																				<a href="feature.html" class="dropdown-item">Voiture</a>
-																			</li>
-																			<li>
-																				<a href="team.html" class="dropdown-item">Moto</a>
-																			</li>
-																		</ul>
-																	</l
-																	<li class="nav-item">
-																		<a href="service.html" class="nav-link">Points de RDV</a>
-																	</l
-																	<li class="nav-item">
-																		<a href="service.html" class="nav-link">Pièces administratives</a>
-																	</li>
-																	-->
+				<ul class="navbar-nav ms-auto">
+
 					<li class="nav-item">
 						<a href="{{ path('app_home')}}" class="nav-link">Accueil</a>
 					</li>
@@ -40,32 +18,29 @@
 						<a href="{{ path('app_financements')}}" class="nav-link">Financements</a>
 					</li>
 
-					<li class="nav-item">
-						<a href="{{ path('app_mail') }}" class="nav-link">Contact</a>
-					</li>
+					{# <li class="nav-item"> #}
+					{# <a href="{{ path('app_mail') }}" class="nav-link">Contact</a> #}
+					{# </li> #}
 
-					<li class="nav-item">
-						<a href="{{ path('app_emailTEST') }}" class="nav-link">EmailTEST</a>
+						<li class="nav-item"> <a href="{{ path('app_emailTEST') }}" class="nav-link">Contact</a>
 					</li>
 
 					<li class="nav-item">
 						<a href="{{ path('app_commentaires') }}" class="nav-link">Commentaires</a>
 					</li>
 
+					<li class="nav-item">
+						<a href="{{ path('app_google_map') }}" class="nav-link">Notre agence</a>
+					</li>
 					<!-- Lien Admin -->
 					<li class="nav-item">
 						<a href="{{ path('admin') }}" class="nav-link">Administration</a>
 					</li>
 
-					<li class="nav-item">
-						<a href="{{ path('app_google_map') }}" class="nav-link">Google map</a>
-					</li>
 
 				</ul>
 
 			</div>
 		</nav>
 	</div>
-</div>
-<!-- Div vide de la même hauteur que la barre de navigation -->
-<div class="space-navbar" style="height: 70px"></div>
+</div><!-- Div vide de la même hauteur que la barre de navigation --><div class="space-navbar" style="height: 70px"></div>
